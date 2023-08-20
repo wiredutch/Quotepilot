@@ -1,0 +1,5 @@
+.invalid-feedback {
+    display: none; /* Initially, hide the error message */
+    color: red; /* Make the error message red */
+    font-size: 14px; /* Set the font size */
+  }
