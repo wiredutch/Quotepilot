@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Removals Quote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="i/favicon-default.png">
+    <!-- AOS 3.0.0-beta.6 plugin CSS (Animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" rel="stylesheet">
+    <!-- Startup CSS + Bootstrap CSS (Styles for all blocks) - Remove ".min" if you want to edit a CSS code -->
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <!-- jQuery 3.6.0 (uncomment line below if you need jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Open graph settings (social networks sharing settings) -->
+    <meta name='twitter:card' content='summary_large_image'>
+    <!-- Open graph settings end -->
+
+	<style>
+		
+		body,
+		form,
+		.container {
+			background-color: #f7f7f7;
+		}
+
+		body {
+			padding-bottom: 100px; /* 100px gap + height of your buttons (assuming 60px for this example) */
+			overflow: hidden;
+		}
+		 /* Hide the scrollbar while keeping scrolling functionality */
+		 body::-webkit-scrollbar {
+            width: 0.2em;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        /* Add this CSS to enable scrolling within the iframe */
+        html {
+            overflow: auto;
+        }
+
+	</style>
+
+</head>
+<body>
+
+<!-- Form 1 -->
+<section class="text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-7 col-sm-10">
+                
+
+				<div class="container mt-5">
+                    <form>
+						<!-- Container 1 -->
+                        <div class="question-container" id="question1">				
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Removal Company inc.
+							</h1>
+								<p class="modalSubTitleText">
+									This is the max number of characters to use when adding a secondary text title.
+								</p>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="ourServices" aria-label="Our Services" required>
+										<option selected>Select...</option>
+										<option value="Home moves">Home moves</option>
+										<option value="Clearance">Clearance</option>
+										<option value="Pick up & Drop off">Pick up & Drop off</option>
+										</select>
+										<label for="ourServices">Our services</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Container 2 -->
+                        <div class="question-container" id="question2" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Moving from...
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="propertyAddressFrom" placeholder="Enter your answer" required>
+										<label for="propertyAddressFrom">Property Address</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="datepicker" placeholder="Enter your answer"  required>
+										<label for="datepicker">When do you want to move? YYYY/MM/DD</label>
+									</div>
+								</div>
+							</div>
+                        </div>
+
+						<!-- Container 3 -->
+						<div class="question-container" id="question3" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Property Details
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div class="grid-container1">
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyType" aria-label="Property Type" required>
+											<option selected>Select...</option>
+											<option value="House">House</option>
+											<option value="Apartment">Apartment</option>
+											<option value="Storage">Storage</option>
+										</select>
+										<label for="propertyType">Property Type</label>
+									</div>
+									<div class="mb-3 form-floating custom-select" id="propertyFloorLevelDiv">
+										<select class="form-select" id="propertyFloorLevel" aria-label="Property Floor Level" required>
+											<option selected>Select...</option>
+											<option value="Basement">Basement</option>
+											<option value="Ground">Ground</option>
+											<option value="Floor Level 1">1</option>
+											<option value="Floor Level 2">2</option>
+											<option value="Floor Level 3">3</option>
+											<option value="Floor Level 4">4</option>
+											<option value="Floor Level 5+">5+</option>
+										</select>
+										<label for="propertyFloorLevel">Floor Level</label>
+									</div>							
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyBedrooms" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="1 Bedroom">1</option>
+											<option value="2 Bedrooms">2</option>
+											<option value="3 Bedrooms">3</option>
+											<option value="4 Bedrooms">4</option>
+											<option value="5+ Bedrooms">5+</option>
+										</select>
+										<label for="propertyBedrooms">Bedrooms</label>
+									</div>
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyOwnership" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Owner">Owner</option>
+											<option value="Tenant">Tenant</option>
+										</select>
+										<label for="propertyOwnership">Property ownership</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Container 4 -->
+						<div class="question-container" id="question4" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Accessibility 
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div div class="grid-container1">
+									<div class="mb-3 form-floating custom-select" id="accessibiltyLiftDiv">
+										<select class="form-select" id="accessibilityLift" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Yes, there is a lift">Yes</option>
+											<option value="There is no lift">No</option>
+										</select>
+										<label for="accessibilityLift">Lift</label>
+									</div>
+									<div class="mb-3 form-floating custom-select" >
+										<select class="form-select" id="accessibiltyParking" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Street Parking">Street parking</option>
+											<option value="Street Parking, permit">Street, permit required</option>
+											<option value="Off street parking available">Off street parking</option>
+										</select>
+										<label for="accessibiltyParking">Parking</label>
+									</div>
+									<div class="mb-3 form-floating custom-select" >
+										<select class="form-select" id="accessibiltyParkingDistance" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Permit Yes">Less than 10 meters</option>
+											<option value="Permit No">Between 10 to 30 meters</option>
+											<option value="Permit No">30 meters +</option>
+										</select>
+										<label for="accessibiltyParkingDistance">Parking distance from property</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="question-container" id="question5" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Large Items
+							</h1>
+							<p class="modalSubTitleText">
+								Is there something particularly large and/or unusual that we should know about?
+							</p>
+							<div class="row">
+								<div>
+									<!-- The container for the dynamic fields -->
+									<div id="dynamicFields" class="col-12">
+										<div class="mb-3 form-floating custom-input">
+											<input type="text" class="form-control" id="largeItems" placeholder="Enter large item" required>
+											<label for="largeItems">Add a large item</label>
+										</div>
+									</div>
+									
+								</div>
+								<!-- Button to add more fields -->
+								<button id="addMoreFields" class="btn btn-secondary">Add More</button> 
+							</div>
+						</div>
+						
+
+						<!-- Container 6 -->
+                        <div class="question-container" id="question6">				
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Moving to...
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div div>
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="propertyAddressTo" placeholder="Enter your answer" required>
+										<label for="propertyAddressTo">Property Address</label>
+									</div>
+								</div>
+							</div>
+                        </div>
+
+						<!-- Container 7 -->
+                        <div class="question-container" id="question7" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Property Details
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div class="grid-container1">
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyTypeTo" aria-label="Property Type" required>
+											<option selected>Select...</option>
+											<option value="House">House</option>
+											<option value="Apartment">Apartment</option>
+											<option value="Storage">Storage</option>
+										</select>
+										<label for="propertyTypeTo">Property Type</label>
+									</div>		
+									<div class="mb-3 form-floating custom-select" id="propertyFloorLevelDivTo">
+										<select class="form-select" id="propertyFloorLevelTo" aria-label="Property Floor Level" required>
+											<option selected>Select...</option>
+											<option value="Basement">Basement</option>
+											<option value="Ground">Ground</option>
+											<option value="Floor Level 1">1</option>
+											<option value="Floor Level 2">2</option>
+											<option value="Floor Level 3">3</option>
+											<option value="Floor Level 4">4</option>
+											<option value="Floor Level 5+">5+</option>
+										</select>
+										<label for="propertyFloorLevelTo">Floor Level</label>
+									</div>						
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyBedroomsTo" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="1 Bedroom">1</option>
+											<option value="2 Bedrooms">2</option>
+											<option value="3 Bedrooms">3</option>
+											<option value="4 Bedrooms">4</option>
+											<option value="5+ Bedrooms">5+</option>
+										</select>
+										<label for="propertyBedroomsTo">Bedrooms</label>
+									</div>
+									<div class="mb-3 form-floating custom-select">
+										<select class="form-select" id="propertyOwnershipTo" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Owner">Owner</option>
+											<option value="Tenant">Tenant</option>
+										</select>
+										<label for="propertyOwnershipTo">Property ownership</label>
+									</div>
+								</div>
+							</div>
+
+                        </div>
+
+						<!-- Container 8 -->
+						<div class="question-container" id="question8" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Accessibility
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div div class="grid-container1">
+									<div class="mb-3 form-floating custom-select" id="accessibiltyLiftDivTo">
+										<select class="form-select" id="accessibiltyLiftTo" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Yes, there is a lift">Yes</option>
+											<option value="There is no lift">No</option>
+										</select>
+										<label for="accessibiltyLiftTo">Lift</label>
+									</div>
+									<div class="mb-3 form-floating custom-select" >
+										<select class="form-select" id="accessibiltyParkingTo" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Street Parking">Street parking</option>
+											<option value="Street Parking, permit">Street, permit required</option>
+											<option value="Off street parking available">Off street parking</option>
+										</select>
+										<label for="accessibiltyParkingTo">Parking</label>
+									</div>
+									<div class="mb-3 form-floating custom-select" >
+										<select class="form-select" id="accessibiltyParkingDistanceTo" aria-label="Floating label select example" required>
+											<option selected>Select...</option>
+											<option value="Permit Yes">Less than 10 meters</option>
+											<option value="Permit No">Between 10 to 30 meters</option>
+											<option value="Permit No">30 meters +</option>
+										</select>
+										<label for="accessibiltyParkingDistanceTo">Parking distance from property</label>
+									</div>
+								</div>
+							</div>
+
+                        </div>
+
+						<!-- Container 9 -->
+						<div class="question-container" id="question9" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Add-on Services
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-group custom-list-group"> <!-- Added 'custom-list-group' class -->
+										<li class="list-group-item custom-list-item">
+											<input class="form-check-input me-1" type="checkbox" value="" id="packingUnpacking">
+											<label class="form-check-label custom-label" for="packingUnpacking">Packing & Unpacking</label> <!-- Added 'custom-label' class -->
+										</li>
+										<li class="list-group-item custom-list-item">
+											<input class="form-check-input me-1" type="checkbox" value="" id="disassembleAssemble">
+											<label class="form-check-label custom-label" for="disassembleAssemble">Disassemble & Assemble</label> <!-- Added 'custom-label' class -->
+										</li>
+										<li class="list-group-item custom-list-item">
+											<input class="form-check-input me-1" type="checkbox" value="" id="storageSolution">
+											<label class="form-check-label custom-label" for="storageSolution">Storage Solution</label> <!-- Added 'custom-label' class -->
+										</li>
+									</ul>
+								</div>
+							</div>
+
+                        </div>
+
+						<!-- Container 10 -->
+						<div class="question-container1" id="question10" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Add-on Products
+							</h1>
+							<p>
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div div class="grid-container">
+
+
+									
+								</div>
+							</div>
+
+                        </div>
+
+						<!-- Container 11 -->
+						<div class="question-container" id="question11" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Contact Details
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div div class="grid-container">
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="firstName" placeholder="Enter your answer" required>
+										<label for="firstName">First Name</label>
+									</div>
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="lastName" placeholder="Enter your answer" required>
+										<label for="lastName">Last Name</label>
+									</div>
+								</div>
+								<div div class="grid-container1">
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="emailAddress" placeholder="Enter your answer" required>
+										<label for="emailAddress">Email Address</label>
+									</div>
+								</div>
+								<div div class="grid-container">
+									<div class="mb-3 form-floating custom-input">
+										<input type="text" class="form-control" id="phoneNumber" placeholder="Enter your answer" required>
+										<label for="phoneNumber">Phone Number</label>
+									</div>
+								</div>
+							</div>
+                        </div>
+
+						<!-- Container 12 -->
+						<div class="question-container" id="question12" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Estimate...
+							</h1>
+							<p class="modalSubTitleText">
+								This is the max number of characters to use when adding a secondary text title.
+							</p>
+							<p>
+								Breakdwon of ( man & van 1 person ) + ( man & van 2 person ) + ( Full home removal ) 
+								+ Choose to book one of the services - click to request to book ( with call back ) or
+								if not clicked ( abandoned cart but sole trader still has phone number ( system emails a follow up the next day ))
+							</p>
+							<div class="row d-flex flex-wrap">
+								<div div class="grid-container">
+
+
+									
+								</div>
+							</div>
+                        </div>
+
+                    </form>
+                </div>
+
+				<div class="col text-center">
+					<span id="progress-indicator" style="font-size: smaller;">Step <span id="current-step">1</span> of <span id="total-steps">11</span></span>
+				</div>
+
+				<div class="container mt-3" id="button-container">
+					<div class="row justify-content-center">
+						<div class="col">
+							<button id="previousBtn" class="btn btn-primary" style="display: none;" onclick="showPreviousQuestion()">Previous</button>
+						</div>
+						
+						<div class="col">
+							<button id="nextBtn" class="btn btn-primary" style="display: none;" onclick="showNextQuestion()">Next</button>
+						</div>
+					</div>
+				</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom JS 		-->
+<script src="js/custom.js"></script>	
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS 3.0.0-beta.6 plugin JS (Animations) -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- Startup JS (Custom js for all blocks) - Remove ".min" if you want to edit a JS code -->
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

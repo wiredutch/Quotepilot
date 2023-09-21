@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.question-container {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.question-input {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    margin-top: 5px;
+    transition: border-bottom 0.3s ease;
+}
+
+.question-input:focus {
+    outline: none;
+    border-bottom: 2px solid #007BFF;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add this CSS rule to style select fields with a bottom border */
+.question-container select {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    margin-top: 5px;
+    transition: border-bottom 0.3s ease;
+}
+
+.question-container select:focus {
+    outline: none;
+    border-bottom: 2px solid #007BFF;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <link rel="stylesheet" href="css/formcustom.css">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="question-container">
+        <!-- Form will be generated here -->
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = [
+                { type: 'text', label: 'Question 1:', placeholder: 'Enter your answer' },
+                { type: 'select', label: 'Question 2:', options: ['Option 1', 'Option 2', 'Option 3'] },
+                { type: 'text', label: 'Question 3:', placeholder: 'Enter your answer' },
+                // Add more questions here as needed
+            ];
+
+            const questionContainer = document.querySelector('.question-container');
+            const questionForm = document.createElement('form');
+            let currentQuestionIndex = 0;
+
+            function createInputField(question) {
+                if (question.type === 'text') {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.placeholder = question.placeholder;
+                    input.classList.add('question-input');
+                    input.required = true;
+                    return input;
+                } else if (question.type === 'select') {
+                    const select = document.createElement('select');
+                    select.classList.add('question-select');
+                    select.required = true;
+                    question.options.forEach((optionText, index) => {
+                        const option = document.createElement('option');
+                        option.value = `option${index + 1}`;
+                        option.text = optionText;
+                        select.appendChild(option);
+                    });
+                    return select;
+                }
+            }
+
+            function showNextQuestion() {
+                if (currentQuestionIndex < questions.length) {
+                    const question = questions[currentQuestionIndex];
+                    const questionDiv = document.createElement('div');
+                    questionDiv.classList.add('question');
+                    const label = document.createElement('label');
+                    label.textContent = question.label;
+                    questionDiv.appendChild(label);
+                    const inputField = createInputField(question);
+                    questionDiv.appendChild(inputField);
+
+                    if (question.type === 'select') {
+                        const nextButton = document.createElement('button');
+                        nextButton.textContent = 'Next';
+                        nextButton.classList.add('btn', 'btn-primary');
+                        nextButton.addEventListener('click', () => {
+                            currentQuestionIndex++;
+                            showNextQuestion();
+                        });
+                        questionDiv.appendChild(nextButton);
+                    }
+
+                    questionForm.appendChild(questionDiv);
+                    questionContainer.innerHTML = '';
+                    questionContainer.appendChild(questionForm);
+                } else {
+                    // All questions are completed
+                    questionContainer.innerHTML = '<p>All questions are completed.</p>';
+                }
+            }
+
+            // Add an event listener to the form to prevent submission and show the next question
+            questionForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                currentQuestionIndex++;
+                showNextQuestion();
+            });
+
+            // Show the first question initially
+            showNextQuestion();
+        });
+    </script>
+</body>
+</html>

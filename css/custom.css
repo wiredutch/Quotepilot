@@ -1,5 +1,207 @@
-.invalid-feedback {
-    display: none; /* Initially, hide the error message */
-    color: red; /* Make the error message red */
-    font-size: 14px; /* Set the font size */
-  }
+.left-align {
+    text-align: left; /* Left-align paragraphs with the 'left-align' class */
+}
+
+.custom-header {
+    border-bottom: none;
+    background-color: #f7f7f7;
+}
+
+.custom-footer {
+    border-top: none;
+    background-color: #f7f7f7;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+    padding: 1em;  /* Adjust this value as per your requirement */
+}
+
+/* Apply negative padding margin to the modal body content */
+.modal-body-custom {
+    margin-top: 0; /* Adjust the value to your preference */
+    background-color: #f7f7f7;
+    padding-top: .1em;
+    padding-bottom: .1em;
+}
+
+/* .modalTitleText {
+    text-align: left;
+} */
+
+/* .modalSubTitleText {
+    padding-bottom: 1em;
+    text-align: left; 
+} */
+
+.question-container {
+    animation: fade-in-out 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#button-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    z-index: 999; /* Ensure the buttons are above other elements */
+}
+
+/* Add your CSS for the progress indicator here */
+#progress-indicator {
+    text-align: center;
+    margin: 14px 0;
+}
+
+/* Custom CSS for adjusting field widths */
+.row.equal-width {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.equal-width .form-floating {
+    flex: 1;
+    margin-right: 10px; /* Adjust the spacing between fields */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 1rem; /* Spacing between grid items */
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns of equal width */
+    gap: 1rem; /* Spacing between grid items */
+}
+
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+.custom-input input.form-control {
+    border-top: none;  /* Remove the border */
+    border-right: none;  /* Remove the border */
+    border-left: none;  /* Remove the border */
+    border-radius: 0;  /* Remove border radius if needed */
+    /* Add any other styling you want for the input */
+}
+
+.custom-select select.form-select {
+    border-top: none;  /* Remove the border */
+    border-right: none;  /* Remove the border */
+    border-left: none;  /* Remove the border */
+    border-radius: 0;  /* Remove border radius if needed */
+    /* Add any other styling you want for the select input */
+}
+
+.custom-select select.form-select option {
+    border-bottom: none;
+    border-radius: 10;
+    box-shadow: none;
+}
+
+/* Styles for screens less than or equal to 992px */
+@media (max-width: 992px) {
+    .full-height-modal .modal-dialog {
+        min-height: 80vh !important;
+        height: 95vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .full-height-modal .modal-content {
+        min-height: 80vh !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .full-height-modal .modal-body {
+        min-height: 80vh !important;
+        flex: 1 !important;
+        display: flex !important;
+    }
+
+    .full-height-modal .modal-body iframe {
+        flex: 1 !important;
+        width: 100% !important;
+        border: none !important;
+    }
+}
+
+/* Styles for screens larger than 992px (Normal size) */
+@media (min-width: 993px) {
+    .full-height-modal .modal-dialog {
+        min-height: 600px !important;
+        height: auto !important;
+        display: block !important;
+        flex-direction: initial !important;
+    }
+
+    .full-height-modal .modal-content {
+        min-height: 600px !important;
+        flex: initial !important;
+        display: block !important;
+        flex-direction: initial !important;
+    }
+
+    .full-height-modal .modal-body {
+        min-height: 600px !important;
+        flex: initial !important;
+        display: block !important;
+    }
+
+    .full-height-modal .modal-body iframe {
+        min-height: 600px !important;
+        width: 100% !important;
+        border: none !important;
+    }
+}
+
+#accessibiltyLift {
+    display: none;
+}
+
+/* Custom style for the list group */
+.custom-list-group .list-group-item {
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    background: none;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    padding: 1.5em 1em; /* Adjust the padding for more space */
+}
+
+/* Custom style for the label to left-align text */
+.custom-label {
+    text-align: left;
+    margin-left: 10px; /* Add some spacing between checkbox and text */
+    font-size: 1.125rem;
+}
+
+/* Change the color of the checkbox when checked */
+.custom-list-group .form-check-input:checked {
+    background-color: #0d83b9; /* Change to your desired color */
+    border-color: #0d83b9; /* Change to your desired color */
+}
+
+
+.custom-checkbox {
+    text-align: right;
+}
