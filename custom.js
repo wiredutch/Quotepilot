@@ -14,9 +14,7 @@ function updateProgressIndicator() {
 function showNextQuestion() {
     if (currentQuestion < totalQuestions) {
         currentQuestion++; // Increment the current question
-            console.log("Advancing to question " + currentQuestion);
         showQuestion(currentQuestion);
-        updateProgressIndicator();
     }
 }
 
@@ -24,7 +22,6 @@ function showNextQuestion() {
 function showPreviousQuestion() {
     if (currentQuestion > 1) {
         currentQuestion--; // Decrement the current question
-            console.log("Going back to question " + currentQuestion);
         showQuestion(currentQuestion);
         updateProgressIndicator();
     }
@@ -32,7 +29,6 @@ function showPreviousQuestion() {
 
 // Function to show a specific question by questionNumber
 function showQuestion(questionNumber) {
-            console.log("Current question: " + currentQuestion);
     // Hide all questions first
     for (var i = 1; i <= totalQuestions; i++) {
         var questionContainer = document.getElementById("question" + i);
@@ -62,8 +58,6 @@ function showQuestion(questionNumber) {
         nextBtn.hide();
         if (questionNumber === 14) {
             nextBtn.after('<button class="btn btn-primary" id="closeBtn" onclick="closeModal()">Close</button>');
-            // Remove the "Previous" button for question 14
-            previousBtn.hide();
         }
     } else {
         nextBtn.show();
@@ -78,18 +72,15 @@ function showQuestion(questionNumber) {
     }
 }
 
-// Call the initial setup
-updateProgressIndicator();
-showQuestion(currentQuestion);
-
+// Function to close the modal (implement this according to your modal logic)
 function closeModal() {
     // Add your code here to close the modal
     // For example, you can use Bootstrap's modal close method if you're using Bootstrap modals
     $('#quoteModal').modal('hide');
 }
 
-
-
+// Call the initial setup
+showQuestion(currentQuestion);
 
 $(document).ready(function () {
     function togglepropertyFloorLevelDivVisibility() {
@@ -128,6 +119,7 @@ $(document).ready(function () {
     // Event listener for propertyFloorLevelDiv
     $("#propertyFloorLevel select").change(toggleLiftVisibilityDiv);
 
+    // Event listener for the Next button
     $("#nextBtn").click(function() {
         togglepropertyFloorLevelDivVisibility();
         toggleLiftVisibilityDiv();
@@ -225,3 +217,27 @@ $(document).ready(function() {
         }
     });
 });
+
+const dateInput = document.getElementById("datepicker");
+
+    dateInput.addEventListener("input", function (e) {
+        let inputValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+        if (inputValue.length > 8) {
+            // Limit the length to 8 characters (YYYYMMDD)
+            inputValue = inputValue.slice(0, 8);
+        }
+
+        if (inputValue.length >= 4) {
+            // Insert slashes for the date format (YYYY/MM/DD)
+            inputValue = inputValue.slice(0, 4) + "/" + inputValue.slice(4, 6) + "/" + inputValue.slice(6);
+        }
+
+        e.target.value = inputValue;
+        if (!/^\d{4}\/\d{2}\/\d{2}$/.test(inputValue)) {
+            // Format is not YYYY/MM/DD, provide assistance
+            e.target.setCustomValidity("Please enter a date in the format YYYY/MM/DD");
+        } else {
+            e.target.setCustomValidity(""); // Reset validation message
+        }
+    });
+

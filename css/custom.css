@@ -58,6 +58,12 @@
     z-index: 999; /* Ensure the buttons are above other elements */
 }
 
+.btn-primary {
+    white-space: nowrap;
+
+    max-width: 100px; /* Adjust as needed */
+}
+
 /* Add your CSS for the progress indicator here */
 #progress-indicator {
     text-align: center;
@@ -185,13 +191,13 @@
     display: flex;
     justify-content: flex-start; /* Align items to the left */
     align-items: center;
-    padding: 1.5em 1em; /* Adjust the padding for more space */
+    padding: 1.5em 1em .5em 1em /* Adjust the padding for more space */
 }
 
 /* Custom style for the label to left-align text */
 .custom-label {
     text-align: left;
-    margin-left: 10px; /* Add some spacing between checkbox and text */
+    margin-left: 1em;
     font-size: 1.125rem;
 }
 
@@ -200,6 +206,43 @@
     background-color: #0d83b9; /* Change to your desired color */
     border-color: #0d83b9; /* Change to your desired color */
 }
+
+/* Custom style for the list group */
+.custom-list-group2 .list-group-item {
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    background: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    padding: 1.5em 1em .5em 1em /* Adjust the padding for more space */
+}
+
+/* Custom style for the label to left-align text */
+.custom-p {
+    text-align: left;
+    margin-left: 1em;
+}
+
+/* Custom style for the label to left-align text */
+.custom-label2 {
+    text-align: left;
+    margin-left: 1em;
+    font-size: 1rem;
+} 
+
+/* Change the color of the checkbox when checked */
+.custom-list-group2 .form-check-input:checked {
+    background-color: #0d83b9; /* Change to your desired color */
+    border-color: #0d83b9; /* Change to your desired color */
+}
+
+/* Custom style for the label to left-align text 
+.custom-p-text {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 1rem;
+} */
 
 
 .custom-checkbox {

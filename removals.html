@@ -30,7 +30,7 @@
 			padding-bottom: 100px; /* 100px gap + height of your buttons (assuming 60px for this example) */
 			overflow: hidden;
 		}
-		 /* Hide the scrollbar while keeping scrolling functionality */
+		 /* Hide the scrollbar while keeping scrolling functionality
 		 body::-webkit-scrollbar {
             width: 0.2em;
         }
@@ -41,7 +41,20 @@
 
         body::-webkit-scrollbar-thumb {
             background-color: transparent;
-        }
+        }  */
+
+		/* Customize the scrollbar track */
+		::-webkit-scrollbar {
+		width: 10px; /* Width of the scrollbar track */
+		height: 30px;
+		}
+
+		/* Customize the scrollbar thumb (the draggable part) */
+		::-webkit-scrollbar-thumb {
+		background-color: #cccbcb; /* Color of the thumb */
+		border-radius: 5px; /* Rounded corners for the thumb */
+		}
+
 
         /* Add this CSS to enable scrolling within the iframe */
         html {
@@ -58,8 +71,6 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-7 col-sm-10">
-                
-
 				<div class="container mt-5">
                     <form>
 						<!-- Container 1 -->
@@ -73,7 +84,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="ourServices" aria-label="Our Services" required>
+										<select class="form-select" id="ourServices" aria-label="Our Services" >
 										<option selected>Select...</option>
 										<option value="Home moves">Home moves</option>
 										<option value="Clearance">Clearance</option>
@@ -96,7 +107,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="propertyAddressFrom" placeholder="Enter your answer" required>
+										<input type="text" class="form-control" id="propertyAddressFrom" placeholder="Enter your answer" >
 										<label for="propertyAddressFrom">Property Address</label>
 									</div>
 								</div>
@@ -104,7 +115,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="datepicker" placeholder="Enter your answer"  required>
+										<input type="text" class="form-control" id="datepicker" placeholder="Enter your answer"  >
 										<label for="datepicker">When do you want to move? YYYY/MM/DD</label>
 									</div>
 								</div>
@@ -122,7 +133,7 @@
 							<div class="row d-flex flex-wrap">
 								<div class="grid-container1">
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyType" aria-label="Property Type" required>
+										<select class="form-select" id="propertyType" aria-label="Property Type" >
 											<option selected>Select...</option>
 											<option value="House">House</option>
 											<option value="Apartment">Apartment</option>
@@ -131,7 +142,7 @@
 										<label for="propertyType">Property Type</label>
 									</div>
 									<div class="mb-3 form-floating custom-select" id="propertyFloorLevelDiv">
-										<select class="form-select" id="propertyFloorLevel" aria-label="Property Floor Level" required>
+										<select class="form-select" id="propertyFloorLevel" aria-label="Property Floor Level" >
 											<option selected>Select...</option>
 											<option value="Basement">Basement</option>
 											<option value="Ground">Ground</option>
@@ -144,7 +155,7 @@
 										<label for="propertyFloorLevel">Floor Level</label>
 									</div>							
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyBedrooms" aria-label="Floating label select example" required>
+										<select class="form-select" id="propertyBedrooms" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="1 Bedroom">1</option>
 											<option value="2 Bedrooms">2</option>
@@ -155,7 +166,7 @@
 										<label for="propertyBedrooms">Bedrooms</label>
 									</div>
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyOwnership" aria-label="Floating label select example" required>
+										<select class="form-select" id="propertyOwnership" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Owner">Owner</option>
 											<option value="Tenant">Tenant</option>
@@ -177,7 +188,7 @@
 							<div class="row d-flex flex-wrap">
 								<div div class="grid-container1">
 									<div class="mb-3 form-floating custom-select" id="accessibiltyLiftDiv">
-										<select class="form-select" id="accessibilityLift" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibilityLift" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Yes, there is a lift">Yes</option>
 											<option value="There is no lift">No</option>
@@ -185,7 +196,7 @@
 										<label for="accessibilityLift">Lift</label>
 									</div>
 									<div class="mb-3 form-floating custom-select" >
-										<select class="form-select" id="accessibiltyParking" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibiltyParking" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Street Parking">Street parking</option>
 											<option value="Street Parking, permit">Street, permit required</option>
@@ -194,7 +205,7 @@
 										<label for="accessibiltyParking">Parking</label>
 									</div>
 									<div class="mb-3 form-floating custom-select" >
-										<select class="form-select" id="accessibiltyParkingDistance" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibiltyParkingDistance" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Permit Yes">Less than 10 meters</option>
 											<option value="Permit No">Between 10 to 30 meters</option>
@@ -218,7 +229,7 @@
 									<!-- The container for the dynamic fields -->
 									<div id="dynamicFields" class="col-12">
 										<div class="mb-3 form-floating custom-input">
-											<input type="text" class="form-control" id="largeItems" placeholder="Enter large item" required>
+											<input type="text" class="form-control" id="largeItems" placeholder="Enter large item" >
 											<label for="largeItems">Add a large item</label>
 										</div>
 									</div>
@@ -227,8 +238,7 @@
 								<!-- Button to add more fields -->
 								<button id="addMoreFields" class="btn btn-secondary">Add More</button> 
 							</div>
-						</div>
-						
+						</div>	
 
 						<!-- Container 6 -->
                         <div class="question-container" id="question6">				
@@ -241,7 +251,7 @@
 							<div class="row">
 								<div div>
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="propertyAddressTo" placeholder="Enter your answer" required>
+										<input type="text" class="form-control" id="propertyAddressTo" placeholder="Enter your answer" >
 										<label for="propertyAddressTo">Property Address</label>
 									</div>
 								</div>
@@ -259,7 +269,7 @@
 							<div class="row d-flex flex-wrap">
 								<div class="grid-container1">
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyTypeTo" aria-label="Property Type" required>
+										<select class="form-select" id="propertyTypeTo" aria-label="Property Type" >
 											<option selected>Select...</option>
 											<option value="House">House</option>
 											<option value="Apartment">Apartment</option>
@@ -268,7 +278,7 @@
 										<label for="propertyTypeTo">Property Type</label>
 									</div>		
 									<div class="mb-3 form-floating custom-select" id="propertyFloorLevelDivTo">
-										<select class="form-select" id="propertyFloorLevelTo" aria-label="Property Floor Level" required>
+										<select class="form-select" id="propertyFloorLevelTo" aria-label="Property Floor Level" >
 											<option selected>Select...</option>
 											<option value="Basement">Basement</option>
 											<option value="Ground">Ground</option>
@@ -281,7 +291,7 @@
 										<label for="propertyFloorLevelTo">Floor Level</label>
 									</div>						
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyBedroomsTo" aria-label="Floating label select example" required>
+										<select class="form-select" id="propertyBedroomsTo" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="1 Bedroom">1</option>
 											<option value="2 Bedrooms">2</option>
@@ -292,7 +302,7 @@
 										<label for="propertyBedroomsTo">Bedrooms</label>
 									</div>
 									<div class="mb-3 form-floating custom-select">
-										<select class="form-select" id="propertyOwnershipTo" aria-label="Floating label select example" required>
+										<select class="form-select" id="propertyOwnershipTo" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Owner">Owner</option>
 											<option value="Tenant">Tenant</option>
@@ -315,7 +325,7 @@
 							<div class="row d-flex flex-wrap">
 								<div div class="grid-container1">
 									<div class="mb-3 form-floating custom-select" id="accessibiltyLiftDivTo">
-										<select class="form-select" id="accessibiltyLiftTo" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibiltyLiftTo" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Yes, there is a lift">Yes</option>
 											<option value="There is no lift">No</option>
@@ -323,7 +333,7 @@
 										<label for="accessibiltyLiftTo">Lift</label>
 									</div>
 									<div class="mb-3 form-floating custom-select" >
-										<select class="form-select" id="accessibiltyParkingTo" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibiltyParkingTo" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Street Parking">Street parking</option>
 											<option value="Street Parking, permit">Street, permit required</option>
@@ -332,7 +342,7 @@
 										<label for="accessibiltyParkingTo">Parking</label>
 									</div>
 									<div class="mb-3 form-floating custom-select" >
-										<select class="form-select" id="accessibiltyParkingDistanceTo" aria-label="Floating label select example" required>
+										<select class="form-select" id="accessibiltyParkingDistanceTo" aria-label="Floating label select example" >
 											<option selected>Select...</option>
 											<option value="Permit Yes">Less than 10 meters</option>
 											<option value="Permit No">Between 10 to 30 meters</option>
@@ -348,124 +358,218 @@
 						<!-- Container 9 -->
 						<div class="question-container" id="question9" style="display: none;">
 							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
-								Add-on Services
-							</h1>
-							<p class="modalSubTitleText">
-								This is the max number of characters to use when adding a secondary text title.
-							</p>
-							<div class="row">
-								<div class="col-md-12">
-									<ul class="list-group custom-list-group"> <!-- Added 'custom-list-group' class -->
-										<li class="list-group-item custom-list-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="packingUnpacking">
-											<label class="form-check-label custom-label" for="packingUnpacking">Packing & Unpacking</label> <!-- Added 'custom-label' class -->
-										</li>
-										<li class="list-group-item custom-list-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="disassembleAssemble">
-											<label class="form-check-label custom-label" for="disassembleAssemble">Disassemble & Assemble</label> <!-- Added 'custom-label' class -->
-										</li>
-										<li class="list-group-item custom-list-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="storageSolution">
-											<label class="form-check-label custom-label" for="storageSolution">Storage Solution</label> <!-- Added 'custom-label' class -->
-										</li>
-									</ul>
-								</div>
-							</div>
-
-                        </div>
-
-						<!-- Container 10 -->
-						<div class="question-container1" id="question10" style="display: none;">
-							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
-								Add-on Products
-							</h1>
-							<p>
-								This is the max number of characters to use when adding a secondary text title.
-							</p>
-							<div class="row d-flex flex-wrap">
-								<div div class="grid-container">
-
-
-									
-								</div>
-							</div>
-
-                        </div>
-
-						<!-- Container 11 -->
-						<div class="question-container" id="question11" style="display: none;">
-							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
 								Contact Details
 							</h1>
 							<p class="modalSubTitleText">
 								This is the max number of characters to use when adding a secondary text title.
 							</p>
 							<div class="row d-flex flex-wrap">
-								<div div class="grid-container">
+								<div class="grid-container1">
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="firstName" placeholder="Enter your answer" required>
-										<label for="firstName">First Name</label>
+										<input type="text" class="form-control" id="nameSurname" placeholder="Enter your answer" >
+										<label for="nameSurname">Name and Surname</label>
 									</div>
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="lastName" placeholder="Enter your answer" required>
-										<label for="lastName">Last Name</label>
-									</div>
-								</div>
-								<div div class="grid-container1">
-									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="emailAddress" placeholder="Enter your answer" required>
+										<input type="text" class="form-control" id="emailAddress" placeholder="Enter your answer" >
 										<label for="emailAddress">Email Address</label>
 									</div>
-								</div>
-								<div div class="grid-container">
 									<div class="mb-3 form-floating custom-input">
-										<input type="text" class="form-control" id="phoneNumber" placeholder="Enter your answer" required>
+										<input type="text" class="form-control" id="phoneNumber" placeholder="Enter your answer" >
 										<label for="phoneNumber">Phone Number</label>
 									</div>
 								</div>
 							</div>
                         </div>
 
-						<!-- Container 12 -->
-						<div class="question-container" id="question12" style="display: none;">
+						<!-- Container 10 -->
+						<div class="question-container" id="question10" style="display: none;">
 							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
-								Estimate...
+								£1800.00
 							</h1>
 							<p class="modalSubTitleText">
-								This is the max number of characters to use when adding a secondary text title.
+								The price is an estimate based on the information that you provided.
 							</p>
-							<p>
-								Breakdwon of ( man & van 1 person ) + ( man & van 2 person ) + ( Full home removal ) 
-								+ Choose to book one of the services - click to request to book ( with call back ) or
-								if not clicked ( abandoned cart but sole trader still has phone number ( system emails a follow up the next day ))
-							</p>
-							<div class="row d-flex flex-wrap">
-								<div div class="grid-container">
-
-
+						
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-group custom-list-group2">
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1">
+													<input class="form-check-input me-1" type="radio" name="movingPack" value="small" id="manVan1Person">
+												</div>
+												<div class="col-10" style="text-align: left;">
+													<label class="form-check-label custom-label2" for="manVan1Person">Man & Van 1 Person</label>
+													<p class="mt-2 custom-p">The job is small enough for you to help us carry</p>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1">
+													<input class="form-check-input me-1" type="radio" name="movingPack" value="medium" id="manVan2People" >
+												</div>
+												<div class="col-10" style="text-align: left;">
+													<label class="form-check-label custom-label2" for="manVan2People">Man & Van 2 People</label>
+													<p class="mt-2 custom-p">Your move is viable for two people to get done</p>
+												</div>
+											</div>
+										</li>
+									</ul>
 									
 								</div>
 							</div>
+
+
+							
                         </div>
+
+						<!-- Container 11 -->
+						<div class="question-container" id="question11" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								£1800.00
+							</h1>
+							<p class="modalSubTitleText">
+								<strong>Add-on Services</strong> This is the max number of chars to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-group custom-list-group">
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1">
+													<input class="form-check-input me-1" type="checkbox" value="Packing" id="packingUnpacking" >
+												</div>
+												<div class="col-11" style="text-align: left;">
+													<label class="form-check-label custom-label2" for="packingUnpacking" style="text-align: left">Packing & Unpacking - <strong>£150</strong></label> <!-- Added 'custom-label' class -->
+													<p class="mt-2 custom-p" >We help take the pain and stress from preperation etc.</p>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1" style="text-align: left;">
+													<input class="form-check-input me-1" type="checkbox" value="Dissemble" id="disassembleAssemble" >
+												</div>
+												<div class="col-11" style="text-align: left;">							
+													<label class="form-check-label custom-label2" for="disassembleAssemble" style="text-align: left">Disassemble & Assemble - <strong>£80</strong></label> <!-- Added 'custom-label' class -->									
+													<p class="mt-2 custom-p" >It's not alwys easy to do all the things that you would like to do.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Container 12 -->
+						<div class="question-container" id="question12" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								£1800.00
+							</h1>
+							<p class="modalSubTitleText">
+								<strong>Add-on Products</strong> This is the max number of chars to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-group custom-list-group2">
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1">
+													<input class="form-check-input me-1" type="checkbox" value="Small" id="item1" name="item1" aria-labelledby="item1Label">
+												</div>
+												<div class="col-11" style="text-align: left;">
+													<label class="form-check-label custom-label2" for="item1" id="item1Label" style="text-align: left">Small Moving Pack - <strong>£50</strong></label>
+													<p class="mt-2 custom-p">10x Small Boxes, 10x Large Boxes, 1x Packing Tape, 1x Bubble Wrap.</p>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item custom-list-item">
+											<div class="row" >
+												<div class="col-1">
+													<input class="form-check-input me-1" type="checkbox" value="Medium" id="item2" name="item2" aria-labelledby="item2Label">
+												</div>
+												<div class="col-11" style="text-align: left;">                            
+													<label class="form-check-label custom-label2" for="item2" id="item2Label" style="text-align: left">Medium Moving Pack - <strong>£70</strong></label>
+													<p class="mt-2 custom-p">15x Small Boxes, 10x Large Boxes, 2x Packing Tape, 1x Bubble Wrap.</p>                                            
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item custom-list-item">
+											<div class="row">
+												<div class="col-1">
+													<input class="form-check-input me-1" type="checkbox" value="Large" id="item3" name="item3" aria-labelledby="item3Label" >
+												</div>
+												<div class="col-11" style="text-align: left;">
+													<label class="form-check-label custom-label2" for="item3" id="item3Label" style="text-align: left">Large Moving Pack - <strong>£90</strong></label>
+													<p class="mt-2 custom-p">25x Small Boxes, 10x Large Boxes, 2x Packing Tape, 1x Bubble Wrap.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+
+						<!-- Container 13 -->
+						<div class="question-container" id="question13" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								£1800.00
+							</h1>
+							<p class="modalSubTitleText">
+								<strong>Estimate</strong> This is the max number of chars to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<p>Some text here about the estimate and based on provided information etc. that when a request to booking is made everything is provisional until we have spoken and confrimed details etc. incl. date of move...</p>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Container 14 -->
+						<div class="question-container" id="question14" style="display: none;">
+							<h1 class="mb-6 modalTitleText" data-aos="fade-down" data-aos-delay="0">
+								Confirmation
+							</h1>
+							<p class="modalSubTitleText">
+								<strong>Thank you</strong> This is the max number of chars to use when adding a secondary text title.
+							</p>
+							<div class="row">
+								<div class="col-md-12">
+									<p>Some text here about what next...</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col text-center">
+							<span id="progress-indicator" style="font-size: smaller;">Step <span id="current-step">1</span> of <span id="total-steps">11</span></span>
+						</div>
+
+						<div class="container mt-3" id="button-container">
+							<div class="row ">
+								<div class="col">
+
+										<button id="previousBtn" class="btn btn-primary" style="display: none;" onclick="showPreviousQuestion()">Previous</button>
+
+								</div>
+								
+								<div class="col">
+
+										<button id="nextBtn" class="btn btn-primary" style="display: none;" onclick="showNextQuestion()">Next</button>
+
+								</div>
+							</div>
+						</div>
+						
 
                     </form>
                 </div>
 
-				<div class="col text-center">
-					<span id="progress-indicator" style="font-size: smaller;">Step <span id="current-step">1</span> of <span id="total-steps">11</span></span>
-				</div>
 
-				<div class="container mt-3" id="button-container">
-					<div class="row justify-content-center">
-						<div class="col">
-							<button id="previousBtn" class="btn btn-primary" style="display: none;" onclick="showPreviousQuestion()">Previous</button>
-						</div>
-						
-						<div class="col">
-							<button id="nextBtn" class="btn btn-primary" style="display: none;" onclick="showNextQuestion()">Next</button>
-						</div>
-					</div>
-				</div>
+
+				
 
             </div>
         </div>
