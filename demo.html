@@ -110,6 +110,7 @@
 							<button class="btn btn-" data-aos="fade-down" data-aos-delay="500" data-bs-toggle="modal" data-bs-target="#quoteModal">
 								Quote me!
 							</button>
+							<button id="startChat">Start Chat</button>
 						</div>
 					</div>
 				</div>
@@ -374,7 +375,8 @@
 			});
 
 		
-  (function(d, t) {
+			document.getElementById('startChat').addEventListener('click', function() {
+    (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
@@ -384,7 +386,8 @@
         });
       }
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
+    })(document, 'script');
+  });
 
 
 		</script>
